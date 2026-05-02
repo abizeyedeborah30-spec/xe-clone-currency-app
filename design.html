@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kigali Health Center</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      background: #b83214;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .nav {
+      background: purple;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+    }
+
+    .nav a {
+      color: orange;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .sidebar {
+      width: 20%;
+      background: #8b5e5e;
+      color: white;
+      padding: 20px;
+    }
+
+    .sidebar p {
+      margin: 20px 0;
+    }
+
+    .main {
+      width: 80%;
+      background: gold;
+      padding: 20px;
+    }
+
+    .main h2 {
+      text-align: center;
+      background: #c98a3d;
+      padding: 10px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    label {
+      align-self: center;
+    }
+
+    input,
+    select {
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .buttons {
+      grid-column: span 2;
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      color: white;
+      margin: 5px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .register {
+      background: #8b5e5e;
+    }
+
+    .status {
+      background: #e53935;
+    }
+
+    .status-box {
+      margin-top: 20px;
+    }
+
+    .status-box span {
+      display: inline-block;
+      width: 40px;
+      height: 15px;
+      margin-right: 10px;
+    }
+
+    .waiting {
+      background: #00bcd4;
+    }
+
+    .progress {
+      background: brown;
+    }
+
+    .done {
+      background: green;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <img scr="sod2.png">
+    <h1>Kigali health CENTER</h1>
+  </div>
+  <div class="nav">
+    <a href="#">HOME</a>
+    <a href="#">APPOINTMENT</a>
+    <a href="#">PATIENT</a>
+  </div>
+  <div class="container">
+    <div class="sidebar">
+      <p>🏠 Register patient</p>
+      <p>👁 View Queues</p>
+      <p>⚙ Settings</p>
+    </div>
+    <div class="main">
+      <h2>PATIENT CHECK-IN</h2>
+      <form>
+        <label>Patient Name:</label>
+        <input type="text" placeholder="Enter Patient Names">
+        <label>Age:</label>
+        <input type="number" placeholder="Enter Age">
+        <label>ID Number:</label>
+        <input type="text" placeholder="Enter ID Number">
+        <label>Appointment Type:</label>
+        <select>
+          <option>Select Appointment</option>
+          <option>Consultation</option>
+          <option>Checkup</option>
+        </select>
+        <div class="buttons">
+          <button class="register">Register</button>
+          <button class="status">Check status</button>
+        </div>
+      </form>
+      <div class="status-box">
+        <p><span class="waiting"></span> Waiting</p>
+        <p><span class="progress"></span> In progress</p>
+        <p><span class="done"></span> Completed</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
